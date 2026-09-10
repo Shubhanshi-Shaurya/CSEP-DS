@@ -10,7 +10,6 @@ public class n_bishops {
             return;
         }
 
-        // Total cells on board: n * n
         for (int pos = r * n + c; pos < n * n; pos++) {
             int row = pos / n;
             int col = pos % n;
@@ -26,7 +25,6 @@ public class n_bishops {
 
                 backtrack(row, col + 1, remaining - 1, n, board, diag1, diag2, results);
 
-                // Backtrack
                 board[row][col] = '.';
                 diag1[d1] = false;
                 diag2[d2] = false;
